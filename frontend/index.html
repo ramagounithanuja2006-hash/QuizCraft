@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizCraft — Online Quiz Maker</title>
+  <meta name="description" content="Create, share and take quizzes with instant scoring and feedback.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Top Navigation ===== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" data-nav="home" href="javascript:void(0)">
+        <span class="brand-icon">🧠</span><span>QuizCraft</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <nav class="nav-links">
+          <a data-nav="home" href="javascript:void(0)">Home</a>
+          <a data-nav="browse" href="javascript:void(0)">Browse Quizzes</a>
+          <a data-nav="create" href="javascript:void(0)" class="auth-only">Create Quiz</a>
+          <a data-nav="dashboard" href="javascript:void(0)" class="auth-only">My Dashboard</a>
+        </nav>
+        <div class="nav-actions" id="navActions"><!-- rendered by JS --></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== App Root (views rendered here) ===== -->
+  <main id="app"></main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>🧠 <strong>QuizCraft</strong> — create, share &amp; master quizzes.</p>
+    <p class="muted small">Built with vanilla HTML, CSS &amp; JavaScript · Data stored locally in your browser</p>
+  </footer>
+
+  <!-- ===== Toast & Modal roots ===== -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modalRoot"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
