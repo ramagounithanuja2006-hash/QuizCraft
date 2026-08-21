@@ -1,1 +1,1 @@
-# Trendify-AI
+QuizCraft
